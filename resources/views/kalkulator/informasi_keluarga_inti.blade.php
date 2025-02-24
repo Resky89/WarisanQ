@@ -16,14 +16,14 @@
                         <label class="block text-lg font-medium text-gray-800 mb-2">Apakah suami pewaris masih hidup?</label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                <input type="radio" name="suami" id="cucuYa" value="ya" class="peer hidden" {{ old('suami', session('suami')) === 'ya' ? 'checked' : '' }}>
+                                <input type="radio" name="suami"  value="ya" class="peer hidden" {{ old('suami', session('suami')) === 'ya' ? 'checked' : '' }}>
                                 <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
                                     <div class="opacity-0 peer-checked:opacity-100">✓</div>
                                 </div>
                                 <span class="text-sm sm:text-base text-gray-700">Ya</span>
                             </label>
                             <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                <input type="radio" name="suami" id="cucuTidak" value="tidak" class="peer hidden" {{ old('suami', session('suami')) === 'tidak' ? 'checked' : '' }}>
+                                <input type="radio" name="suami"  value="tidak" class="peer hidden" {{ old('suami', session('suami')) === 'tidak' ? 'checked' : '' }}>
                                 <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
                                     <div class="opacity-0 peer-checked:opacity-100">✓</div>
                                 </div>
@@ -49,14 +49,14 @@
                     <p class="text-sm text-gray-600 mb-3">Anak diluar pernikahan sah belum bisa diakui</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                            <input type="radio" name="anak" value="ya" class="peer hidden" {{ old('anak', session('anak')) === 'ya' ? 'checked' : '' }} onchange="toggleAnak(true)">
+                            <input type="radio" id="anakYa" name="anak" value="ya" class="peer hidden" {{ old('anak', session('anak')) === 'ya' ? 'checked' : '' }} onchange="toggleAnak(true)">
                             <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
                                 <div class="opacity-0 peer-checked:opacity-100">✓</div>
                             </div>
                             <span class="text-sm sm:text-base text-gray-700">Ya</span>
                         </label>
                         <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                            <input type="radio" name="anak" value="tidak" class="peer hidden" {{ old('anak', session('anak')) === 'tidak' ? 'checked' : '' }} onchange="toggleAnak(false)">
+                            <input type="radio" name="anak" id="anakTidak" value="tidak" class="peer hidden" {{ old('anak', session('anak')) === 'tidak' ? 'checked' : '' }} onchange="toggleAnak(false)">
                             <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
                                 <div class="opacity-0 peer-checked:opacity-100">✓</div>
                             </div>
@@ -65,7 +65,6 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
                 <!-- Jumlah anak pewaris -->
                 <div class="mb-3 {{ old('anak', session('anak')) !== 'ya' ? 'hidden' : '' }}" id="jumlahAnak">
                     <p class="fw-bold  my-0">Jumlah anak pewaris yang masih hidup saat pewaris baru saja meninggal</p>
@@ -76,29 +75,6 @@
                             <input type="number" class="form-control form-control-small"
                                 value="{{ old('jumlah_anak_lk', session('jumlah_anak_lk', 0)) }}" min="0"
                                 id="jumlahAnakLk" oninput="handleJumlahAnakLkChange()" name="jumlah_anak_lk">
-=======
-                <form action="{{ route('informasi_keluarga_inti_post') }}" method="post" id="keluargaIntiForm" class="px-6 sm:px-10 w-full">
-                    @csrf
-
-                    @if (session('gender') === 'perempuan' && session('status_pernikahan') === 'menikah')
-                        <div class="mb-6">
-                            <label class="block text-lg font-medium text-gray-800 mb-2">Apakah suami pewaris masih hidup?</label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                    <input type="radio" name="suami"  value="ya" class="peer hidden" {{ old('suami', session('suami')) === 'ya' ? 'checked' : '' }}>
-                                    <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
-                                        <div class="opacity-0 peer-checked:opacity-100">✓</div>
-                                    </div>
-                                    <span class="text-sm sm:text-base text-gray-700">Ya</span>
-                                </label>
-                                <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                    <input type="radio" name="suami"  value="tidak" class="peer hidden" {{ old('suami', session('suami')) === 'tidak' ? 'checked' : '' }}>
-                                    <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
-                                        <div class="opacity-0 peer-checked:opacity-100">✓</div>
-                                    </div>
-                                    <span class="text-sm sm:text-base text-gray-700">Tidak</span>
-                                </label>
-                            </div>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Anak Perempuan</label>
@@ -149,27 +125,6 @@
                             <input type="number" name="jumlah_cucu_pr" id="jumlahCucuPr"
                                 class="w-full px-4 py-2 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#66E13A]"
                                 value="{{ old('jumlah_cucu_pr', session('jumlah_cucu_pr', 0)) }}" min="0">
-                    @endif
-
-                    <!-- Continue with similar styling for other form elements -->
-                    <div class="mb-6">
-                        <label class="block text-lg font-medium text-gray-800 mb-2">Apakah pewaris memiliki anak dari pasangan yang sah?</label>
-                        <p class="text-sm text-gray-600 mb-3">Anak diluar pernikahan sah belum bisa diakui</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                <input type="radio" id="anakYa" name="anak" value="ya" class="peer hidden" {{ old('anak', session('anak')) === 'ya' ? 'checked' : '' }} onchange="toggleAnak(true)">
-                                <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
-                                    <div class="opacity-0 peer-checked:opacity-100">✓</div>
-                                </div>
-                                <span class="text-sm sm:text-base text-gray-700">Ya</span>
-                            </label>
-                            <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                <input type="radio" name="anak" id="anakTidak" value="tidak" class="peer hidden" {{ old('anak', session('anak')) === 'tidak' ? 'checked' : '' }} onchange="toggleAnak(false)">
-                                <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
-                                    <div class="opacity-0 peer-checked:opacity-100">✓</div>
-                                </div>
-                                <span class="text-sm sm:text-base text-gray-700">Tidak</span>
-                            </label>
                         </div>
                     </div>
                 </div>
