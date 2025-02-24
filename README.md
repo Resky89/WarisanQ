@@ -1,7 +1,7 @@
 # WarisanQ - Islamic Inheritance Calculator
 
 <p align="center">
-  <img src="https://warisanq.vercel.app/images/logo.png" alt="WarisanQ Logo" width="200"/>
+  <img src="https://warisanq.vercel.app/images/logo_text.png" alt="WarisanQ Logo" width="200"/>
 </p>
 
 ## Description
