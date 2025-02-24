@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>WarisanQ</title>
-    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
+    <link rel="icon" href="https://warisanq.vercel.app/images/logo.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -74,8 +74,8 @@
             <a class="back-btn" href="{{ route('home') }}">
                 <i class="fa-solid fa-xl fa-arrow-left" style="color: white;"></i>
             </a>
-            <h2 class="text-light text-center text-2xl font-bold">
-                Dasar Hukum Mawaris
+            <h2 class="text-light text-center text-1xl md:text-2xl font-bold">
+                Mawaris
             </h2>
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo" width="60">
