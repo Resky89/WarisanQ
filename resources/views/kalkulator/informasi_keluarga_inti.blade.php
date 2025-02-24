@@ -16,14 +16,14 @@
                             <label class="block text-lg font-medium text-gray-800 mb-2">Apakah suami pewaris masih hidup?</label>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                    <input type="radio" name="suami" id="cucuYa" value="ya" class="peer hidden" {{ old('suami', session('suami')) === 'ya' ? 'checked' : '' }}>
+                                    <input type="radio" name="suami"  value="ya" class="peer hidden" {{ old('suami', session('suami')) === 'ya' ? 'checked' : '' }}>
                                     <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
                                         <div class="opacity-0 peer-checked:opacity-100">✓</div>
                                     </div>
                                     <span class="text-sm sm:text-base text-gray-700">Ya</span>
                                 </label>
                                 <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                    <input type="radio" name="suami" id="cucuTidak" value="tidak" class="peer hidden" {{ old('suami', session('suami')) === 'tidak' ? 'checked' : '' }}>
+                                    <input type="radio" name="suami"  value="tidak" class="peer hidden" {{ old('suami', session('suami')) === 'tidak' ? 'checked' : '' }}>
                                     <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
                                         <div class="opacity-0 peer-checked:opacity-100">✓</div>
                                     </div>
@@ -49,14 +49,14 @@
                         <p class="text-sm text-gray-600 mb-3">Anak diluar pernikahan sah belum bisa diakui</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                <input type="radio" name="anak" value="ya" class="peer hidden" {{ old('anak', session('anak')) === 'ya' ? 'checked' : '' }} onchange="toggleAnak(true)">
+                                <input type="radio" id="anakYa" name="anak" value="ya" class="peer hidden" {{ old('anak', session('anak')) === 'ya' ? 'checked' : '' }} onchange="toggleAnak(true)">
                                 <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
                                     <div class="opacity-0 peer-checked:opacity-100">✓</div>
                                 </div>
                                 <span class="text-sm sm:text-base text-gray-700">Ya</span>
                             </label>
                             <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:bg-[#66E13A]/10 cursor-pointer">
-                                <input type="radio" name="anak" value="tidak" class="peer hidden" {{ old('anak', session('anak')) === 'tidak' ? 'checked' : '' }} onchange="toggleAnak(false)">
+                                <input type="radio" name="anak" id="anakTidak" value="tidak" class="peer hidden" {{ old('anak', session('anak')) === 'tidak' ? 'checked' : '' }} onchange="toggleAnak(false)">
                                 <div class="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black peer-checked:bg-[#66E13A] peer-checked:border-[#66E13A] peer-checked:text-white flex items-center justify-center mr-3">
                                     <div class="opacity-0 peer-checked:opacity-100">✓</div>
                                 </div>
