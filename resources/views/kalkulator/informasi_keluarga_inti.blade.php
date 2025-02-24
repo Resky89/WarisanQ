@@ -99,7 +99,6 @@
                                     <span class="text-sm sm:text-base text-gray-700">Tidak</span>
                                 </label>
                             </div>
->>>>>>> a3f9a3e8a6ac30144ca61185664aeef1b2ffc7fd
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Anak Perempuan</label>
@@ -145,13 +144,11 @@
                                 class="w-full px-4 py-2 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#66E13A]"
                                 value="{{ old('jumlah_cucu_lk', session('jumlah_cucu_lk', 0)) }}" min="0">
                         </div>
-<<<<<<< HEAD
                         <div id="cucuPr">
                             <label class="block text-sm font-medium text-gray-700 mb-1">Cucu Perempuan</label>
                             <input type="number" name="jumlah_cucu_pr" id="jumlahCucuPr"
                                 class="w-full px-4 py-2 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#66E13A]"
                                 value="{{ old('jumlah_cucu_pr', session('jumlah_cucu_pr', 0)) }}" min="0">
-=======
                     @endif
 
                     <!-- Continue with similar styling for other form elements -->
@@ -173,7 +170,6 @@
                                 </div>
                                 <span class="text-sm sm:text-base text-gray-700">Tidak</span>
                             </label>
->>>>>>> a3f9a3e8a6ac30144ca61185664aeef1b2ffc7fd
                         </div>
                     </div>
                 </div>
