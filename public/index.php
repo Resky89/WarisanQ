@@ -1,5 +1,11 @@
 <?php
 
+// Silence deprecation warnings and disable error display on production/Vercel to prevent headers-already-sent errors.
+if (getenv('VERCEL') || isset($_ENV['VERCEL']) || (isset($_SERVER['APP_ENV']) && $_SERVER['APP_ENV'] === 'production')) {
+    ini_set('display_errors', '0');
+    error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+}
+
 use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
